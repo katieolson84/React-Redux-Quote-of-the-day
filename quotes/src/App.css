@@ -43,7 +43,7 @@
   transform: rotate(40deg);
 }
 
-
+/* mobile first design */
 
 @media (min-width: 600px){
   .ron{
