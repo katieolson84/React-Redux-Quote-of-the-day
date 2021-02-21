@@ -4,23 +4,41 @@ import { getQuote } from '../actions';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    width: 80%;
+    width: 85%;
     .quoteText{
-        font-size: 2.6rem;
+        font-size: 1.8rem;
         color: white;
+
     }
     button{
         background-color: #2B7A78;
-        margin-top: 1.5%;
-        padding: 1%;
+        position: fixed;
+        padding: 1.2rem;
         border: none;
-        color: #17252A;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         border-radius: 3px;
         color: #DEF2F1;
         font-family: 'Rozha One', serif;
+        left: 50%;
+        top: 50%;
+        margin-top: 130px;
+        margin-left: -80px;
+        
+        .wait{
+          color: white;
+        }
     }
-    
+    @media (min-width: 1024px){
+      width: 80%;
+      .quoteText{
+        font-size: 2.8rem;
+      }
+      button{
+        left: 46%;
+        font-size: 1.8rem;
+        top: 50%;
+      }
+    }
 `
 
 const Quotes = ({ quote, isFetching, error, getQuote }) => {
@@ -35,9 +53,9 @@ const Quotes = ({ quote, isFetching, error, getQuote }) => {
     return <h2>Something went wrong: {error}</h2>;
   }
 
-  if (isFetching) {
-    return <h2>Ron is busy saying cool stuff, please wait...</h2>;
-  }
+  // if (isFetching) {
+  //   return <h2 className="wait">Ron is busy saying cool stuff, please wait...</h2>;
+  // }
 
   const handleClick = ()=> {
     getQuote();
@@ -52,7 +70,9 @@ const Quotes = ({ quote, isFetching, error, getQuote }) => {
             </div>
             <hr></hr>
         </div>
+        <div>
         <button onClick={handleClick}>What did Ron say?</button>
+        </div>
     </Container>
   );
 };

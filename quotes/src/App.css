@@ -27,11 +27,42 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 40vh;
-  padding-top: 150px;
+  max-height: 50vh;
+  padding-top: 4rem;
+  font-size: 2rem;
+}
+
+.ron{
+  position: fixed;
+  left: 39%;
+  top: 50%;
+  margin-top: 200px;
+}
+
+.ron:hover{
+  transform: rotate(40deg);
 }
 
 
+
+@media (min-width: 600px){
+  .ron{
+    left: 41.5%;
+  }
+}
+
+@media (min-width: 768px){
+  .ron{
+    left: 44.5%;
+  }
+}
+
+@media (min-width: 1024px){
+  .ron{
+    top: 51%;
+    left: 46%;
+  }
+}
 
 
 
