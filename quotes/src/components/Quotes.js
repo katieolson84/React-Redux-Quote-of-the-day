@@ -23,6 +23,7 @@ const Container = styled.div`
         top: 50%;
         margin-top: 130px;
         margin-left: -80px;
+        cursor: pointer;
         
         .wait{
           color: white;
